@@ -6,90 +6,46 @@ function closeNav() {
     document.getElementById("mySidenav").style.width="0";
 }
 
-//map markers and info start here
+//map markers and info will start here
 
  var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.915988, lng: 151.235948},
-          zoom: 15
+          center: {lat: 39.776789, lng: -104.972536},
+          zoom: 10
         });
           
           var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
         var icons = {
-          parking: {
-            icon: iconBase + 'parking_lot_maps.png'
-          },
-          library: {
-            icon: iconBase + 'library_maps.png'
-          },
+          
           pickup: {
             icon: iconBase + 'red-circle.png'
           }
         };
 
         var features = [
-          {
-            position: new google.maps.LatLng(-33.91721, 151.22630),
+          {// the lab
+            position: new google.maps.LatLng(39.790596, -104.848517),
             type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91539, 151.22820),
+          }, {// blue kudu
+            position: new google.maps.LatLng(39.783736, -104.859345),
             type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91747, 151.22912),
+          }, {// cheeba chew
+            position: new google.maps.LatLng(39.786521, -104.980401),
             type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91910, 151.22907),
+          }, {// lucky
+            position: new google.maps.LatLng(39.772637,  -104.968040),
             type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91725, 151.23011),
+          }, {// mhs
+            position: new google.maps.LatLng(39.709492, -105.001057),
             type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91872, 151.23089),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91784, 151.23094),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91682, 151.23149),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91790, 151.23463),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91666, 151.23468),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.916988, 151.233640),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-            type: 'pickup'
-          }, {
-            position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+          }, {// incredibles
+            position: new google.maps.LatLng(39.692826,  -104.998734),
             type: 'pickup'
           }
         ];
 
-        // Create markers.
+        // this creates the markers
         features.forEach(function(feature) {
           var marker = new google.maps.Marker({
             position: feature.position,
